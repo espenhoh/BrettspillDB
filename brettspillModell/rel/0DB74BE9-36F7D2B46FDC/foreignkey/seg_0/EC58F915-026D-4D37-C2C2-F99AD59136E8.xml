@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EC58F915-026D-4D37-C2C2-F99AD59136E8" containerWithKeyObject="66F6977E-E9E3-75F6-8BD2-3DA2C8FF492F" localFKIndex="2AF7ABB3-2AB0-3F5C-5626-CCD420D76642" name="fk_table1_SPILL1">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>fk_table1_SPILL1</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<referredTableLongName>brettspill.spill</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>53EEFBC6-1267-DE27-3CCF-56BC5EC64731</referredTableID>
+<keyObject>785DAECD-E1D5-EFF8-82CC-22D6E9B58BAC</keyObject>
+<referredKeyID>785DAECD-E1D5-EFF8-82CC-22D6E9B58BAC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>spill_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

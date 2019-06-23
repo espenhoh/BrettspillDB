@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53EEFBC6-1267-DE27-3CCF-56BC5EC64731" schemaObject="867AEE66-246C-4F13-CE6D-CE7AB048FAC4" name="spill">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>spill</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="spill_id" id="4C9E2F8E-AAF3-97FE-6C54-35DFE1609994">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>spill_id</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="navn" id="D9D852B1-87E2-C894-6570-E04113AF7308">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>navn</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="leder" id="22BE7DB4-9EFB-4717-919A-118C5C218210">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>leder</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="336B3C37-F8D6-133A-F363-665187DBDCF8" referredColumn="06CB323C-2E20-9424-D6C4-346FD1CA739D"/>
+</associations>
+</Column>
+<Column name="type_spill" id="70BBF026-87C0-5E55-0FC1-2EF3F792E60F">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>type_spill</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dato_fom" id="90DD813B-B10D-B330-F2F1-D591201DCAEF">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>dato_fom</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<ownDataTypeParameters>,19,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dato_tom" id="E0578A7A-C2BC-633C-BB9D-E50FD63993D9">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>dato_tom</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<ownDataTypeParameters>,19,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="max_poeng" id="98030F96-3562-18A3-EED5-4F1E753BB1DF">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>spill</sourceObjSchema>
+<sourceObjName>max_poeng</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>13</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="785DAECD-E1D5-EFF8-82CC-22D6E9B58BAC" name="PRIMARY">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>PRIMARY</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C9E2F8E-AAF3-97FE-6C54-35DFE1609994"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF84B4C8-6048-4325-BA97-3644D148D4AC" name="fk_SPILL_SPILLER1_idx">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>fk_SPILL_SPILLER1_idx</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22BE7DB4-9EFB-4717-919A-118C5C218210"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAF51A4A-DAAF-AA15-9E17-18E44D47B9A5" name="idx_dato">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>idx_dato</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90DD813B-B10D-B330-F2F1-D591201DCAEF"/>
+<colUsage columnID="E0578A7A-C2BC-633C-BB9D-E50FD63993D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="075C1413-4CD5-E61A-A34D-196C1F8E7806" name="fk_SPILL_SPILLER1">
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22BE7DB4-9EFB-4717-919A-118C5C218210"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

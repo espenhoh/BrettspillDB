@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="E1B9ABDD-9D84-AA0C-8B34-792A1571975C" mainViewID="28D24A15-D955-598A-966E-1BD8EA0F41EB">
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:15:20 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

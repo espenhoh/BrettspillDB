@@ -1,0 +1,12 @@
+# Konfigurasjon
+>> mysql --print-defaults
+mysql.exe would have been started with the following arguments:
+--port=3306 --plugin-dir=C:/Program Files/MariaDB 10.3/lib/plugin
+
+
+# Restarte service
+>> sc stop mysql
+>> sc start mysql
+
+# Securing MariaDB
+mysql_secure_installation

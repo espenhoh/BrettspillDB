@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E9A67D2-E099-331B-1AAE-4B756ECCE2DC" schemaObject="867AEE66-246C-4F13-CE6D-CE7AB048FAC4" name="handling">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>handling</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="handling_id" id="2447A521-9AC0-B679-7D64-BB0347C54FE4">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>handling</sourceObjSchema>
+<sourceObjName>handling_id</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="k_handling" id="66DB5D9D-2136-AE77-6400-9E5FE1C2C210">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>handling</sourceObjSchema>
+<sourceObjName>k_handling</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4CD39175-37DD-BB6F-87BE-2E78723B4D60" referredColumn="67F6E884-394E-82D0-1746-924E21F5EB69"/>
+</associations>
+</Column>
+<Column name="tur_id" id="B8D89175-CE04-20DA-8D10-CECF688E300E">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>handling</sourceObjSchema>
+<sourceObjName>tur_id</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C7ECB5B-8F51-2709-DB6F-55FE3BD679E1" referredColumn="4B6AD020-5772-E53D-2145-48E6B40E820C"/>
+</associations>
+</Column>
+<Column name="spill_id" id="F9178FEB-32B3-71B5-BE4B-FED5360BE2FF">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>handling</sourceObjSchema>
+<sourceObjName>spill_id</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C7ECB5B-8F51-2709-DB6F-55FE3BD679E1" referredColumn="C29048C4-75F7-F48A-36A9-BA064420633E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="08F7FDCF-C5F2-308C-B39B-2A25B5080536" name="PRIMARY">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>PRIMARY</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2447A521-9AC0-B679-7D64-BB0347C54FE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDB9D536-2C94-1E59-49EE-DC1CDC728852" name="fk_HANDLING_K_HANDLING1_idx">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>fk_HANDLING_K_HANDLING1_idx</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66DB5D9D-2136-AE77-6400-9E5FE1C2C210"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0024BE70-E390-C467-DDF0-E7D2647C1B54" name="fk_HANDLING_TUR1_idx">
+<sourceConnName>Brettspill - root</sourceConnName>
+<sourceObjSchema>brettspill</sourceObjSchema>
+<sourceObjName>fk_HANDLING_TUR1_idx</sourceObjName>
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8D89175-CE04-20DA-8D10-CECF688E300E"/>
+<colUsage columnID="F9178FEB-32B3-71B5-BE4B-FED5360BE2FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23991F85-80A8-FBE5-63B7-0EFC89EAED3A" name="fk_HANDLING_K_HANDLING1">
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66DB5D9D-2136-AE77-6400-9E5FE1C2C210"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3EE07924-B4BA-FF9A-F429-16FE1AD78BA9" name="fk_HANDLING_TUR1">
+<createdBy>asbj0</createdBy>
+<createdTime>2019-06-23 11:41:11 UTC</createdTime>
+<ownerDesignName>brettspillModell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8D89175-CE04-20DA-8D10-CECF688E300E"/>
+<colUsage columnID="F9178FEB-32B3-71B5-BE4B-FED5360BE2FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
