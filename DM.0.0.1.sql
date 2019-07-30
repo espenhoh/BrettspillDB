@@ -19,20 +19,18 @@ USE brettspill;
 -- Table brettspill.SPILLER
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS brettspill.SPILLER (
-  brukernavn VARCHAR(15) NOT NULL,
-  kallenavn VARCHAR(25) NOT NULL,
+  spiller_id INT NOT NULL AUTO_INCREMENT,
+  kallenavn VARCHAR(45) NOT NULL,
   epost VARCHAR(45) NOT NULL,
   passord VARCHAR(45) NOT NULL,
   dato_registrert DATE NOT NULL,
   innlogget BIT(1) NOT NULL DEFAULT b'0',
   i_spill BIT(1) NOT NULL DEFAULT b'0',
   dato_sist_innlogget TIMESTAMP NULL,
-  PRIMARY KEY (brukernavn))
+  PRIMARY KEY (spiller_id))
 ENGINE = InnoDB;
 
 CREATE UNIQUE INDEX navn_UNIQUE ON brettspill.SPILLER (brukernavn ASC);
-
-CREATE UNIQUE INDEX farge_UNIQUE ON brettspill.SPILLER (farge ASC);
 
 CREATE UNIQUE INDEX epost_UNIQUE ON brettspill.SPILLER (epost ASC);
 
@@ -43,36 +41,24 @@ CREATE UNIQUE INDEX epost_UNIQUE ON brettspill.SPILLER (epost ASC);
 CREATE TABLE IF NOT EXISTS brettspill.SPILL (
   spill_id INT NOT NULL AUTO_INCREMENT,
   navn VARCHAR(45) NULL,
-  leder VARCHAR(15) NOT NULL,
-  fk_type_spill CHAR(20)NOT NULL,
+  fk_leder int NOT NULL,
+  type_spill ENUM('Bosetterne','Byer og riddere','Sjøfarer','Sjøfarer med byer og riddere','Traders and barbarians ikke planlagt implementert','Explorers and Pirates ikke planlagt implementert') NOT NULL,
   dato_fom TIMESTAMP NULL,
   dato_tom TIMESTAMP NULL,
-  max_poeng TINYINT(1) UNSIGNED NOT NULL DEFAULT 13,
+  maks_poeng TINYINT(1) UNSIGNED NOT NULL DEFAULT 13,
   PRIMARY KEY (spill_id),
-  CONSTRAINT fk_SPILL_SPILLER1
-    FOREIGN KEY (leder)
-    REFERENCES brettspill.SPILLER (brukernavn)
+  CONSTRAINT fk_SPILL_LEDER
+    FOREIGN KEY (fk_leder)
+    REFERENCES brettspill.SPILLER (spiller_id)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-ALTER TABLE  brettspill.SPILL ADD CONSTRAINT fk_TYPE_SPILL1
+    ON UPDATE NO ACTION
+  CONSTRAINT fk_TYPE_SPILL1
     FOREIGN KEY (fk_type_spill)
     REFERENCES brettspill.TYPE_SPILL (pk_type_spill)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-CREATE INDEX fk_SPILL_SPILLER1_idx ON brettspill.SPILL (leder ASC);
+    ON UPDATE NO ACTION);
 
 CREATE INDEX idx_dato USING BTREE ON brettspill.SPILL (dato_fom ASC, dato_tom ASC);
-
--- -----------------------------------------------------
--- Table brettspill.K_HANDLING
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS brettspill.TYPE_SPILL (
-   pk_type_spill CHAR(20) NOT NULL,
-   dekode VARCHAR(100)
-  PRIMARY KEY (pk_type_spill))
-ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -108,23 +94,14 @@ CREATE UNIQUE INDEX game_id_UNIQUE USING BTREE ON brettspill.SPILLER_I_SPILL (sp
 -- Table brettspill.TUR
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS brettspill.TUR (
-  tur_id INT NOT NULL,
-  spill_id INT NOT NULL,
-  PRIMARY KEY (tur_id, spill_id),
+  tur_id INT NOT NULL AUTO_INCREMENT,
+  fk_spiller_i_spill_id INT NOT NULL,
+  PRIMARY KEY (tur_id),
   CONSTRAINT fk_table1_SPILL1
-    FOREIGN KEY (spill_id)
-    REFERENCES brettspill.SPILL (spill_id)
+    FOREIGN KEY (fk_spiller_i_spill_id)
+    REFERENCES brettspill.SPILLER_I_SPILL (spiller_i_spill_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table brettspill.K_HANDLING
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS brettspill.K_HANDLING (
-  k_handling VARCHAR(20) NOT NULL,
-  PRIMARY KEY (k_handling))
 ENGINE = InnoDB;
 
 
