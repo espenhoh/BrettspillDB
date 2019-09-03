@@ -2,13 +2,18 @@ USE Brettspill;
 
 SELECT User,Host FROM MYSQL.user;
 
-CREATE USER 'brettspill_admin'@'%' IDENTIFIED BY 'brettspill_admin';
+DROP USER IF EXISTS 'brettspill_admin'@'127.0.0.1';
+CREATE USER 'brettspill_admin'@'127.0.0.1' IDENTIFIED BY 'brettspill_admin';
+#SET PASSWORD FOR 'brettspill_admin'@'Espen-PC' = PASSWORD('brettspill_admin');
 
-SET PASSWORD FOR 'brettspill_admin'@'%' = PASSWORD('brettspill_admin');
+#For integrasjonstesting
+DROP USER IF EXISTS 'test'@'localhost';
+CREATE USER 'test'@'localhost' IDENTIFIED BY 'testPassord';
+SET PASSWORD FOR 'test'@'localhost' = PASSWORD('testPassord');
 
-GRANT ALL ON brettspill.* TO 'brettspill_admin'@'%' WITH GRANT OPTION;
+GRANT ALL ON brettspill.* TO 'brettspill_admin'@'127.0.0.1' WITH GRANT OPTION;
 
-SHOW GRANTS FOR 'brettspill_admin'@'%';
+SHOW GRANTS FOR 'brettspill_admin'@'127.0.0.1';
 
 /*
 
