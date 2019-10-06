@@ -5,13 +5,23 @@ SELECT User,Host FROM MYSQL.user;
 DROP USER IF EXISTS 'brettspill_admin'@'127.0.0.1';
 CREATE USER 'brettspill_admin'@'127.0.0.1' IDENTIFIED BY 'brettspill_admin';
 #SET PASSWORD FOR 'brettspill_admin'@'Espen-PC' = PASSWORD('brettspill_admin');
+GRANT ALL ON brettspill.* TO 'brettspill_admin'@'127.0.0.1' WITH GRANT OPTION;
+
+#For persistering
+DROP USER IF EXISTS 'springuser'@'%';
+CREATE USER 'springuser'@'%' IDENTIFIED BY 'testPassord';
+SET PASSWORD FOR 'springuser'@'%' = PASSWORD('testPassord');
+#GRANT DELETE, INSERT, SELECT, UPDATE ON brettspill.* TO 'springuser'@'%';
+userGRANT ALL ON brettspill.* TO 'springuser'@'%';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'springuser'@'%';
 
 #For integrasjonstesting
 DROP USER IF EXISTS 'test'@'localhost';
 CREATE USER 'test'@'localhost' IDENTIFIED BY 'testPassord';
 SET PASSWORD FOR 'test'@'localhost' = PASSWORD('testPassord');
 
-GRANT ALL ON brettspill.* TO 'brettspill_admin'@'127.0.0.1' WITH GRANT OPTION;
+
 
 SHOW GRANTS FOR 'brettspill_admin'@'127.0.0.1';
 
@@ -19,7 +29,7 @@ SHOW GRANTS FOR 'brettspill_admin'@'127.0.0.1';
 
 UPDATE mysql.USER SET PASSWORD=PASSWORD('new_pwd') WHERE USER = 'root' and HOST = 'localhost';
 UPDATE mysql.USER SET PASSWORD=PASSWORD('new_pwd') WHERE USER = 'root' and HOST = '127.0.0.1';
-FLUSH PRIVELIGES;
+FLUSH PRIVILEGES;
 
 DROP USER 'test'@'localhost';
 DROP USER ''@'localhost';
