@@ -1,0 +1,4 @@
+--Backup
+mysqldump --user=brettspill_admin --password --lock-tables brettspill -r backup/dbs.sql
+--Restore
+mysql --user=brettspill_admin --password brettspill < backup/dbs.sql
