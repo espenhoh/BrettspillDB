@@ -1,11 +1,11 @@
 USE Brettspill;
 
-SELECT User,Host FROM MYSQL.user;
+SELECT User,Host FROM mysql.user;
 
-DROP USER IF EXISTS 'brettspill_admin'@'127.0.0.1';
-CREATE USER 'brettspill_admin'@'127.0.0.1' IDENTIFIED BY 'brettspill_admin';
-#SET PASSWORD FOR 'brettspill_admin'@'Espen-PC' = PASSWORD('brettspill_admin');
-GRANT ALL ON brettspill.* TO 'brettspill_admin'@'127.0.0.1' WITH GRANT OPTION;
+SELECT * FROM information_schema.SCHEMATA 
+WHERE schema_name = "brettspill";
+
+
 
 #For persistering
 DROP USER IF EXISTS 'springuser'@'%';

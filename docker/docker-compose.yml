@@ -5,8 +5,8 @@ services:
     container_name: maria
     command:
       # docker run -it --rm mariadb:tag --verbose --help for liste med options
-      - --character-set-server=utf8mb4
-      - --collation-server=utf8mb4_unicode_ci
+      - --character-set-server=utf8 #A UTF-8 encoding of the Unicode character set using one to four bytes per character.
+      - --collation-server=utf8_general_ci
     environment:
       # Workaround https://github.com/docker-library/mariadb/issues/251, trolig fisket i 10.4.12
       - MYSQL_INITDB_SKIP_TZINFO=1
